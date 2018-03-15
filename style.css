@@ -1,8 +1,10 @@
-body, html {
-  height: 100%;
+html, body {
   margin: 0;
   padding: 0;
-  background-attachment: fixed;
+}
+
+html {
+  height: 100%;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
@@ -14,6 +16,7 @@ body {
   transform: translateY(-20px);
   opacity: 0;
   transition: transform 1s ease, opacity 1s ease;
+  margin-bottom: 3em;
 }
 
 .content {
@@ -71,6 +74,5 @@ a {
 }
 
 .source {
-  font-size: 1.1em;
   margin-top: 1.2em;
 }
