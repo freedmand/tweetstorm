@@ -12,10 +12,10 @@
   <body>
     <a-scene id="scene">
       <a-assets>
-        <a-asset-item id="bird-obj" src="/tweet.obj"></a-asset-item>
-        <a-asset-item id="bird-mtl" src="/tweet.mtl"></a-asset-item>
-        <a-asset-item id="wind-sound" src="/wind_mono.mp3" preload="auto" response-type="arraybuffer"></a-asset-item>
-        <img id="tweet" src="/tweet.png">
+        <a-asset-item id="bird-obj" src="tweet.obj"></a-asset-item>
+        <a-asset-item id="bird-mtl" src="tweet.mtl"></a-asset-item>
+        <a-asset-item id="wind-sound" src="wind_mono.mp3" preload="auto" response-type="arraybuffer"></a-asset-item>
+        <img id="tweet" src="tweet.png">
       </a-assets>
       <a-sky material="shader:displacement; depthWrite: false;"></a-sky>
       
@@ -29,7 +29,7 @@
       <a-text id="tweetstorm" value="#TweetStorm" align="center" color="white" position="0.733 15.402 94.057" scale="30 30 30" rotation="0 -180 0">
       </a-text>
 
-      <a-entity cubemap="folder: /whitehouse/; ext: png; transparent: true">
+      <a-entity cubemap="folder: whitehouse/; ext: png; transparent: true">
         <a-animation attribute="position"
         dur="120000"
         fill="forwards"
