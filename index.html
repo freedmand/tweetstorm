@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TweetStorm</title>
+    <meta name="description" content="TweetStorm VR experience">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="buttonBig()">
+    <div class="content">
+      <h1>TweetStorm</h1>
+      <p>Since President Donald Trump assumed office on January 20, 2017, he has tweeted 2,545 times. That&rsquo;s an average of more than 6 tweets a day. That&rsquo;s excluding retweets.</p>
+      <p>It&rsquo;s hard to picture just how many tweets this really is, so I created a virtual reality web experience to better visualize it.</p>
+      <div class="button">
+        <a href="/vr.html"><button id="button">Begin</button></a>
+      </div>
+      <div class="credits">
+        <div class="credit">
+          The Oval Office 360 photo is taken from <a href="https://www.facebook.com/WhiteHouse/photos/a.1199645353456529.1073741828.1191441824276882/1259732414114489/?type=3">The White House Facebook page</a>
+        </div>
+        <div class="credit">
+          The wind sounds are by <a href="https://freesound.org/people/klankbeeld/sounds/361431/">klankbeeld on freesound.org</a> and <a href="https://freesound.org/people/Bosk1/sounds/217186/">Bosk1 on freedsound.org</a> and are used under a CreativeCommons Attribution license
+        </div>
+        <div class="credit">
+          The tweet sound effect is from the Sound Effects channel on <a href="https://www.youtube.com/watch?v=dXsztntI6Mg">YouTube</a>
+        </div>
+        <div class="credit">
+          The Twitter logo and sound effects are copyright <a href="https://twitter.com">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function buttonBig() {
+        const button = document.getElementById('button');
+        button.style.fontSize = '1.3em';
+        document.body.style.opacity = '1';
+        document.body.style.transform = 'translateY(0)';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TweetStorm</title>
+    <meta name="description" content="TweetStorm VR experience">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-cubemap-component@0.1.3/dist/aframe-cubemap-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> 
+    <script src="displacement-shader.js"></script>
+  </head>
+  <body>
+    <a-scene id="scene">
+      <a-assets>
+        <a-asset-item id="bird-obj" src="/tweet.obj"></a-asset-item>
+        <a-asset-item id="bird-mtl" src="/tweet.mtl"></a-asset-item>
+        <a-asset-item id="wind-sound" src="/wind_mono.mp3" preload="auto" response-type="arraybuffer"></a-asset-item>
+        <img id="tweet" src="/tweet.png">
+      </a-assets>
+      <a-sky material="shader:displacement; depthWrite: false;"></a-sky>
+      
+      <a-text id="num-tweets" value="0 Tweets since Donald Trump assumed office" align="center" color="white" position="0 0 -45" scale="30 30 30">
+        <a-animation attribute="position"
+          dur="20000"
+          fill="forwards"
+          to="0 0 -100"></a-animation>
+      </a-text>
+
+      <a-text id="tweetstorm" value="#TweetStorm" align="center" color="white" position="0.733 15.402 94.057" scale="30 30 30" rotation="0 -180 0">
+      </a-text>
+
+      <a-entity cubemap="folder: /whitehouse/; ext: png; transparent: true">
+        <a-animation attribute="position"
+        dur="120000"
+        fill="forwards"
+        to="0 0 -1000"></a-animation>
+      </a-entity>
+      <a-entity position="0 0 -2" sound="src: #wind-sound; autoplay: true; loop: true;"></a-entity>
+      <a-entity light="type: ambient; color: #BBB"></a-entity>
+      <a-entity light="type: directional; color: #222; intensity: 3.0" position="-0.5 1 1"></a-entity>
+      <a-entity light="intensity:5; color: #222;" position="0 8.285 -20.958"></a-entity>
+    </a-scene>
+    <script src="demo.js"></script>
+  </body>
+</html>

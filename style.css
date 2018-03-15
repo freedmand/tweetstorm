@@ -1,0 +1,71 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+  background: linear-gradient(#1379c7, #183842);
+  color: white;
+  background-attachment: fixed;
+  font-size: 1.5em;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.content {
+  margin: 5em auto 0 auto;
+  width: 800px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: solid 2px white;
+  color: white;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.8s ease, opacity 1s ease, font-size 1s ease;
+}
+
+button:hover {
+  background: white;
+  color: #1b4a65;
+  opacity: 0.8;
+}
+
+.button {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.credits {
+  font-size: 0.5em;
+  margin-top: 7em;
+  color: #ffffff7a;
+}
+
+.credit {
+  margin: 0.5em 0;
+}
+
+.credits a {
+  color: #ffffffb8;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: inherit;
+}
